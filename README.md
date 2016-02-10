@@ -1,6 +1,6 @@
 ## Rust plugin for vim-codefmt
 
-This is a temporary hack until vim-codefmt gets rust support.
+This plugin enables rust formatting in vim-codefmt.
 
 ### Installation
 #### Prerequisites
@@ -15,3 +15,9 @@ This is a temporary hack until vim-codefmt gets rust support.
 
 ### Usage
 Format a rust buffer with :FormatCode
+
+### Configuration
+You can change the rustfmt executable with the rustfmt_executable codefmt flag. 
+In your ~/.vimrc: 
+
+```Glaive codefmt rustfmt_executable='/users/foo/bin/rustfmt'```
