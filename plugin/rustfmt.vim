@@ -17,12 +17,12 @@ function! rustfmt#GetRustFmtFormatter() abort
   endfunction
 
   ""
-  " Reformat the current buffer with js-beautify or the binary named in
-  " @flag(js_beautify_executable), only targeting the range between {startline} and
+  " Reformat the current buffer with rustfmt or the binary named in
+  " @flag(rustfmt_executable), only targeting the range between {startline} and
   " {endline}.
   " @throws ShellError
   function l:formatter.FormatRange(startline, endline) abort
-    "let l:cmd = [s:plugin.Flag('js_beautify_executable'), '-f', '-']
+    "let l:cmd = [s:plugin.Flag('rustfmt_executable')]
     let l:cmd = ['rustfmt']
 
     call maktaba#ensure#IsNumber(a:startline)
